@@ -738,7 +738,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The close method is used to close this model.</p>
+<p>The <span class='object_link'><a href="#close-instance_method" title="Sketchup::Model#close (method)">#close</a></span> method is used to close this model.</p>
 </div></span>
   
 </li>
@@ -3417,7 +3417,15 @@ model.commit_operation
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The close method is used to close this model. On Mac OS, only the active model can be closed. On Windows, since there can be only one document open, this method will perform a File/New operation.</p>
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>As of SketchUp 2024.0 this method will ensure the next model window gets focus if there is one. Before that `Sketchup.active_model` might return `nil` after calling this method even though more models where open.</p>
+</div>
+  </div>
+
+
+<p>The <span class='object_link'><a href="#close-instance_method" title="Sketchup::Model#close (method)">#close</a></span> method is used to close this model. On Mac OS, only the active model can be closed. On Windows, since there can be only one document open, this method will perform a File/New operation.</p>
 
 
   </div>
@@ -3457,7 +3465,7 @@ model.commit_operation
       
         &mdash;
         <div class='inline'>
-<p>If true, model changes will be ignored and save prompts will be suppressed. If false, changes will not be ignored and save prompts will be displayed normally.</p>
+<p>If `true`, model changes will be ignored and save prompts will be suppressed. If `false`, changes will not be ignored and save prompts will be displayed normally.</p>
 </div>
       
     </li>

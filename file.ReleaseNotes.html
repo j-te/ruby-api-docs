@@ -169,6 +169,8 @@
 
 <p>Here are the build numbers for recent SketchUp releases. Note that build numbers in languages besides English are larger for each release, so it is best to check for builds that are greater than or equal to the numbers here.</p>
 <ul><li>
+<p><strong>SU2024.0</strong> = 24.0.484 on Windows 64-bit, 24.0.483 on Mac 64-bit.</p>
+</li><li>
 <p><strong>SU2023.1.3</strong> = 23.1.340 on Windows 64-bit, 23.1.341 on Mac 64-bit.</p>
 </li><li>
 <p><strong>SU2023.1.2</strong> = 23.1.315 on Windows 64-bit, 23.1.314 on Mac 64-bit.</p>
@@ -252,11 +254,52 @@
 <p><strong>SU6 M6</strong> = 6.4.265 on Windows, 6.4.263 on Mac.</p>
 </li></ul>
 
+<h1 id="label-What-27s+new+in+SketchUp+2024.0">What&#39;s new in SketchUp 2024.0</h1>
+
+<h2 id="label-Ruby+API+Additions+and+Improvements">Ruby API Additions and Improvements</h2>
+<ul><li>
+<p>Added support for export option <code>:page_range</code> for <span class='object_link'><a href="Layout/Document.html#export-instance_method" title="Layout::Document#export (method)">Layout::Document#export</a></span>.</p>
+</li><li>
+<p>Added <span class='object_link'><a href="Sketchup/View.html#graphics_engine-instance_method" title="Sketchup::View#graphics_engine (method)">Sketchup::View#graphics_engine</a></span>.</p>
+</li><li>
+<p>Added rendering options support for Ambient Occlusion:</p>
+<ul><li>
+<p><span class='object_link'><a href="Sketchup/RenderingOptions.html" title="Sketchup::RenderingOptions (class)">Sketchup::RenderingOptions</a></span> keys added:</p>
+<ul><li>
+<p><code>&quot;AmbientOcclusion&quot;</code></p>
+</li><li>
+<p><code>&quot;AmbientOcclusionDistance&quot;</code></p>
+</li><li>
+<p><code>&quot;AmbientOcclusionIntensity&quot;</code></p>
+</li></ul>
+</li><li>
+<p><span class='object_link'><a href="Sketchup/RenderingOptionsObserver.html" title="Sketchup::RenderingOptionsObserver (class)">Sketchup::RenderingOptionsObserver</a></span> constants:</p>
+<ul><li>
+<p><code>ROPSetAOEnabled</code></p>
+</li><li>
+<p><code>ROPSetAODistance</code></p>
+</li><li>
+<p><code>ROPSetAOIntensity</code></p>
+</li></ul>
+</li></ul>
+</li><li>
+<p><span class='object_link'><a href="Sketchup/RenderingOptions.html#[]=-instance_method" title="Sketchup::RenderingOptions#[]= (method)">Sketchup::RenderingOptions#[]=</a></span> will now raise an <code>ArgumentError</code> if the given value cannot be set  for the given key. This is a breaking change since earlier versions of the API would not indicate any  failures for such erroneous calls.</p>
+</li></ul>
+
+<h2 id="label-Ruby+API+Bug+Fixes">Ruby API Bug Fixes</h2>
+<ul><li>
+<p>Fixed issue on Mac where <span class='object_link'><a href="UI.html#create_cursor-class_method" title="UI.create_cursor (method)">UI.create_cursor</a></span> would provide an incorrect hotspot</p>
+</li><li>
+<p>Fixed regression in <span class='object_link'><a href="Sketchup.html#resize_viewport-class_method" title="Sketchup.resize_viewport (method)">Sketchup.resize_viewport</a></span> introduced in SketchUp 2023.1 on Windows.</p>
+</li><li>
+<p>Fixed <span class='object_link'><a href="Layout/Entity.html#move_to_layer-instance_method" title="Layout::Entity#move_to_layer (method)">Layout::Entity#move_to_layer</a></span> when moving an entity from a nonshared layer.</p>
+</li><li>
+<p>Changed <span class='object_link'><a href="Sketchup/Model.html#close-instance_method" title="Sketchup::Model#close (method)">Sketchup::Model#close</a></span> to set focus to the next open model window on macOS.</p>
+</li><li>
+<p>Fixed regression from SketchUp 2023.1 with the Ruby Console on Windows where new-line  character was incorrectly added to the end of <code>print</code> calls.</p>
+</li></ul>
+
 <h1 id="label-What-27s+new+in+SketchUp+2023.1">What&#39;s new in SketchUp 2023.1</h1>
-
-<h2 id="label-Update+OpenSSL+to+1.1.1u">Update OpenSSL to 1.1.1u</h2>
-
-<p>The version of OpenSSL in Ruby was updated to 1.1.1u.</p>
 
 <h2 id="label-Ruby+API+Additions+and+Improvements">Ruby API Additions and Improvements</h2>
 <ul><li>
@@ -282,14 +325,6 @@
 </li></ul>
 
 <h1 id="label-What-27s+new+in+SketchUp+2023.0.2">What&#39;s new in SketchUp 2023.0.2</h1>
-
-<h2 id="label-Upgrade+Ruby+to+2.7.7">Upgrade Ruby to 2.7.7</h2>
-
-<p>For SketchUp 2023.0.2 we have upgraded the version of Ruby that we ship with SketchUp from 2.7.2 to 2.7.7.</p>
-
-<h2 id="label-Update+OpenSSL+to+1.1.1t">Update OpenSSL to 1.1.1t</h2>
-
-<p>The version of OpenSSL in Ruby was updated to 1.1.1t.</p>
 
 <h2 id="label-Ruby+API+Bug+Fixes">Ruby API Bug Fixes</h2>
 <ul><li>

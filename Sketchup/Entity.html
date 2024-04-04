@@ -443,7 +443,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The to_s method is used to retrieve the string representation of the entity.</p>
+<p>The <span class='object_link'><a href="#inspect-instance_method" title="Sketchup::Entity#inspect (method)">#inspect</a></span> method is used to retrieve the string representation of the entity.</p>
 </div></span>
   
 </li>
@@ -587,7 +587,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The to_s method is used to retrieve the string representation of the entity.</p>
+<p>The <span class='object_link'><a href="#to_s-instance_method" title="Sketchup::Entity#to_s (method)">#to_s</a></span> method is used to retrieve the string representation of the entity.</p>
 </div></span>
   
 </li>
@@ -1493,7 +1493,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The to_s method is used to retrieve the string representation of the entity.</p>
+<p>The <span class='object_link'><a href="#inspect-instance_method" title="Sketchup::Entity#inspect (method)">#inspect</a></span> method is used to retrieve the string representation of the entity.</p>
 
 
   </div>
@@ -1504,23 +1504,10 @@
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_depth'>depth</span> <span class='op'>=</span> <span class='int'>100</span>
-<span class='id identifier rubyid_width'>width</span> <span class='op'>=</span> <span class='int'>100</span>
-<span class='id identifier rubyid_model'>model</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Sketchup.html" title="Sketchup (module)">Sketchup</a></span></span><span class='period'>.</span><span class='id identifier rubyid_active_model'><span class='object_link'><a href="../Sketchup.html#active_model-class_method" title="Sketchup.active_model (method)">active_model</a></span></span>
+      <pre class="example code"><code><span class='id identifier rubyid_model'>model</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Sketchup.html" title="Sketchup (module)">Sketchup</a></span></span><span class='period'>.</span><span class='id identifier rubyid_active_model'><span class='object_link'><a href="../Sketchup.html#active_model-class_method" title="Sketchup.active_model (method)">active_model</a></span></span>
 <span class='id identifier rubyid_entities'>entities</span> <span class='op'>=</span> <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_active_entities'>active_entities</span>
-<span class='id identifier rubyid_pts'>pts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-<span class='id identifier rubyid_pts'>pts</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
-<span class='id identifier rubyid_pts'>pts</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
-<span class='id identifier rubyid_pts'>pts</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='id identifier rubyid_depth'>depth</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
-<span class='id identifier rubyid_pts'>pts</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_depth'>depth</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
-
-<span class='comment'># Add the face to the entities in the model
-</span><span class='id identifier rubyid_face'>face</span> <span class='op'>=</span> <span class='id identifier rubyid_entities'>entities</span><span class='period'>.</span><span class='id identifier rubyid_add_face'>add_face</span> <span class='id identifier rubyid_pts'>pts</span>
-
-<span class='comment'># I just happen to know that the second and third entities in the
-</span><span class='comment'># entities objects are edges.
-</span><span class='id identifier rubyid_entity1'>entity1</span> <span class='op'>=</span> <span class='id identifier rubyid_entities'>entities</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
-<span class='id identifier rubyid_st'>st</span> <span class='op'>=</span> <span class='id identifier rubyid_entity1'>entity1</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span></code></pre>
+<span class='id identifier rubyid_edge'>edge</span> <span class='op'>=</span> <span class='id identifier rubyid_entities'>entities</span><span class='period'>.</span><span class='id identifier rubyid_add_line'>add_line</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Geom.html" title="Geom (module)">Geom</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Geom/Point3d.html" title="Geom::Point3d (class)">Point3d</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Geom/Point3d.html#initialize-instance_method" title="Geom::Point3d#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="../Geom.html" title="Geom (module)">Geom</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Geom/Point3d.html" title="Geom::Point3d (class)">Point3d</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Geom/Point3d.html#initialize-instance_method" title="Geom::Point3d#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='int'>9</span><span class='comma'>,</span> <span class='int'>9</span><span class='comma'>,</span> <span class='int'>9</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_string'>string</span> <span class='op'>=</span> <span class='id identifier rubyid_edge'>edge</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span></code></pre>
     
   </div>
 
@@ -1534,14 +1521,16 @@
       
       
       
-        &mdash;
-        <div class='inline'>
-<p>the string representation of the entity if successful</p>
-</div>
-      
     </li>
   
 </ul>
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="#to_s-instance_method" title="Sketchup::Entity#to_s (method)">#to_s</a></span></li>
+    
+  </ul>
 <p class="tag_title">Version:</p>
 <ul class="version">
   
@@ -2127,7 +2116,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The to_s method is used to retrieve the string representation of the entity.</p>
+<p>The <span class='object_link'><a href="#to_s-instance_method" title="Sketchup::Entity#to_s (method)">#to_s</a></span> method is used to retrieve the string representation of the entity.</p>
 
 
   </div>
@@ -2138,23 +2127,10 @@
     <p class="tag_title">Examples:</p>
     
       
-      <pre class="example code"><code><span class='id identifier rubyid_depth'>depth</span> <span class='op'>=</span> <span class='int'>100</span>
-<span class='id identifier rubyid_width'>width</span> <span class='op'>=</span> <span class='int'>100</span>
-<span class='id identifier rubyid_model'>model</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Sketchup.html" title="Sketchup (module)">Sketchup</a></span></span><span class='period'>.</span><span class='id identifier rubyid_active_model'><span class='object_link'><a href="../Sketchup.html#active_model-class_method" title="Sketchup.active_model (method)">active_model</a></span></span>
+      <pre class="example code"><code><span class='id identifier rubyid_model'>model</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Sketchup.html" title="Sketchup (module)">Sketchup</a></span></span><span class='period'>.</span><span class='id identifier rubyid_active_model'><span class='object_link'><a href="../Sketchup.html#active_model-class_method" title="Sketchup.active_model (method)">active_model</a></span></span>
 <span class='id identifier rubyid_entities'>entities</span> <span class='op'>=</span> <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_active_entities'>active_entities</span>
-<span class='id identifier rubyid_pts'>pts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-<span class='id identifier rubyid_pts'>pts</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
-<span class='id identifier rubyid_pts'>pts</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
-<span class='id identifier rubyid_pts'>pts</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_width'>width</span><span class='comma'>,</span> <span class='id identifier rubyid_depth'>depth</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
-<span class='id identifier rubyid_pts'>pts</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_depth'>depth</span><span class='comma'>,</span> <span class='int'>0</span><span class='rbracket'>]</span>
-
-<span class='comment'># Add the face to the entities in the model
-</span><span class='id identifier rubyid_face'>face</span> <span class='op'>=</span> <span class='id identifier rubyid_entities'>entities</span><span class='period'>.</span><span class='id identifier rubyid_add_face'>add_face</span> <span class='id identifier rubyid_pts'>pts</span>
-
-<span class='comment'># I just happen to know that the second and third entities in the
-</span><span class='comment'># entities objects are edges.
-</span><span class='id identifier rubyid_entity1'>entity1</span> <span class='op'>=</span> <span class='id identifier rubyid_entities'>entities</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span>
-<span class='id identifier rubyid_st'>st</span> <span class='op'>=</span> <span class='id identifier rubyid_entity1'>entity1</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span></code></pre>
+<span class='id identifier rubyid_edge'>edge</span> <span class='op'>=</span> <span class='id identifier rubyid_entities'>entities</span><span class='period'>.</span><span class='id identifier rubyid_add_line'>add_line</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../Geom.html" title="Geom (module)">Geom</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Geom/Point3d.html" title="Geom::Point3d (class)">Point3d</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Geom/Point3d.html#initialize-instance_method" title="Geom::Point3d#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="../Geom.html" title="Geom (module)">Geom</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Geom/Point3d.html" title="Geom::Point3d (class)">Point3d</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="../Geom/Point3d.html#initialize-instance_method" title="Geom::Point3d#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='int'>9</span><span class='comma'>,</span> <span class='int'>9</span><span class='comma'>,</span> <span class='int'>9</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_string'>string</span> <span class='op'>=</span> <span class='id identifier rubyid_edge'>edge</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span></code></pre>
     
   </div>
 
@@ -2167,11 +2143,6 @@
         <span class='type'>(<tt><span class='object_link'><a href="../String.html" title="String (class)">String</a></span></tt>)</span>
       
       
-      
-        &mdash;
-        <div class='inline'>
-<p>the string representation of the entity if successful</p>
-</div>
       
     </li>
   

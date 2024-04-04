@@ -1351,7 +1351,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The size_viewport method changes the pixel size of the viewport and SketchUp window.</p>
+<p>The <span class='object_link'><a href="#resize_viewport-class_method" title="Sketchup.resize_viewport (method)">Sketchup.resize_viewport</a></span> method changes the pixel size of the viewport and SketchUp window.</p>
 </div></span>
   
 </li>
@@ -4717,6 +4717,19 @@ extensions.each{ |extension|
       
     </li>
   
+    <li>
+      
+        <span class='name'>with_status</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>true</tt>)</em>
+      
+      
+    </li>
+  
 </ul>
 
 <p class="tag_title">Returns:</p>
@@ -4731,7 +4744,7 @@ extensions.each{ |extension|
       
         &mdash;
         <div class='inline'>
-<p>status code if opening the file succeeded, <code>false</code> otherwise.</p>
+<p>status code if opening with <code>with_status</code> set to <code>true</code>, otherwise <code>true</code> or <code>false</code>.</p>
 </div>
       
     </li>
@@ -5885,7 +5898,24 @@ extensions.each{ |extension|
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The size_viewport method changes the pixel size of the viewport and SketchUp window. This can be useful for producing a consistent behavior in automatic testing, regardless of the display resolution.</p>
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>In SketchUp 2024.0 and later this method doesn&#39;t behave correctly in all cases on Windows. The passed values are internally converted to logical pixels, rounded and converted back to physical pixels. This means certain sizes, such as 1000 px at 150% scaling, cannot be accurately set.</p>
+
+<p>As a workaround in you can use sizes that are evenly divisible with common scale factors, if you depend on pixel perfect sizes.</p>
+
+<pre class="code"><code class=""><span class='comment'># Changes by 1 px  :(
+</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='int'>1000</span><span class='op'>/</span><span class='float'>1.5</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_round'>round</span> <span class='op'>*</span> <span class='float'>1.5</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_round'>round</span> <span class='comment'># =&gt; 1001
+</span><span class='comment'># Survives the round-trip :)
+</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='int'>1500</span><span class='op'>/</span><span class='float'>1.5</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_round'>round</span> <span class='op'>*</span> <span class='float'>1.5</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_round'>round</span> <span class='comment'># =&gt; 1500
+</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='int'>1500</span><span class='op'>/</span><span class='float'>1.25</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_round'>round</span> <span class='op'>*</span> <span class='float'>1.25</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_round'>round</span> <span class='comment'># =&gt; 1500
+</span></code></pre>
+</div>
+  </div>
+
+
+<p>The <span class='object_link'><a href="#resize_viewport-class_method" title="Sketchup.resize_viewport (method)">resize_viewport</a></span> method changes the pixel size of the viewport and SketchUp window. This can be useful for producing a consistent behavior in automatic testing, regardless of the display resolution.</p>
 
 
   </div>
@@ -5986,6 +6016,22 @@ extensions.each{ |extension|
         
         <div class='inline'>
 <p>SketchUp 2023.0</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Known Bugs:</p>
+<ul class="bug">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>In SketchUp 2023.1 this method didn&#39;t behave correctly on Windows. No known workarounds.</p>
 </div>
       
     </li>

@@ -346,6 +346,15 @@
 <p><code>ROPDrawHiddenObjects</code></p>
 </li></ul>
 
+<p>Added in SketchUp 2024.0:</p>
+<ul><li>
+<p><code>AmbientOcclusion</code></p>
+</li><li>
+<p><code>AmbientOcclusionDistance</code></p>
+</li><li>
+<p><code>AmbientOcclusionIntensity</code></p>
+</li></ul>
+
 
   </div>
 </div>
@@ -572,6 +581,15 @@
         </dt>
       
         <dt id="ROPTransparencySortMethod-constant" class="">Sketchup::RenderingOptions::ROPTransparencySortMethod
+        </dt>
+      
+        <dt id="ROPSetAOEnabled-constant" class="">Sketchup::RenderingOptions::ROPSetAOEnabled
+        </dt>
+      
+        <dt id="ROPSetAODistance-constant" class="">Sketchup::RenderingOptions::ROPSetAODistance
+        </dt>
+      
+        <dt id="ROPSetAOIntensity-constant" class="">Sketchup::RenderingOptions::ROPSetAOIntensity
         </dt>
       
         <dt id="ROPSetFaceColorMode-constant" class="">Sketchup::RenderingOptions::ROPSetFaceColorMode
@@ -1264,6 +1282,24 @@
         &mdash;
         <div class='inline'>
 <p>the value that was set</p>
+</div>
+      
+    </li>
+  
+</ul>
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>If the given key is invalid, the key&#39;s value is not settable, or the given value is invalid. SketchUp versions earlier than 2024.0 will not raise this error.</p>
 </div>
       
     </li>

@@ -187,6 +187,14 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'>
+<p>The window size is not guaranteed to be pixel perfect in all SketchUp versions and operating systems. Prefer responsive designs that can take up some fluctuations in size.</p>
+</div>
+  </div>
+
+
 <p>The Ruby HtmlDialog class allows you to create and interact with HTML dialog boxes from Ruby. This is the best way to generate complex, embedded UIs inside SketchUp, but it does generally require HTML and JavaScript expertise.</p>
 
 <p>If your goal is to simple display a website to your users, consider using <span class='object_link'>#openURL</span>, which will show them a web page in their default browser rather than inside a dialog in SketchUp.</p>
@@ -196,7 +204,10 @@
 <p>For usage examples, including how to migrate from the old WebDialog class, see <a href="https://github.com/SketchUp/htmldialog-examples">github.com/SketchUp/htmldialog-examples</a>. You may use the <a href="https://sketchup.github.io/modus-for-sketchup-extensions" target="_parent" title="Trimble Modus">Trimble Modus</a> framework for a look and feel of your dialog that matches that of SketchUp&#39;s dialogs.</p>
 
 <p>HtmlDialog uses the following versions of CEF (Chromium Embedded Framework):</p>
-<dl class="rdoc-list label-list"><dt>SketchUp 2021.1
+<dl class="rdoc-list label-list"><dt>SketchUp 2024.0
+<dd>
+<p>CEF 112</p>
+</dd><dt>SketchUp 2021.1
 <dd>
 <p>CEF 88</p>
 </dd><dt>SketchUp 2019.0
